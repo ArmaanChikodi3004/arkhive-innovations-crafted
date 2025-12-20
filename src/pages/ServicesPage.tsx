@@ -15,6 +15,7 @@ import {
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 import useLenis from '@/hooks/useLenis';
+import ServicesScene from '@/components/three/ServicesScene';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
@@ -126,23 +127,28 @@ const Services = () => {
       <Navbar />
       
       {/* Hero */}
-      <section className="min-h-[60vh] flex items-center justify-center relative overflow-hidden pt-24">
+      <section className="min-h-[70vh] flex items-center justify-center relative overflow-hidden pt-24">
         <div className="absolute inset-0 bg-gradient-hero" />
         <div className="absolute top-1/3 left-1/4 w-[500px] h-[500px] rounded-full bg-primary/5 blur-[150px]" />
         <div className="absolute bottom-1/3 right-1/4 w-[400px] h-[400px] rounded-full bg-accent/5 blur-[120px]" />
         
         <div className="container mx-auto px-6 relative z-10">
-          <div className="services-hero max-w-4xl mx-auto text-center">
-            <span className="inline-block px-4 py-2 rounded-full glass text-sm font-body text-primary mb-6">
-              Our Services
-            </span>
-            <h1 className="font-display text-5xl md:text-6xl lg:text-7xl font-bold mb-8 leading-tight">
-              Solutions That Power{' '}
-              <span className="text-gradient">Your Growth</span>
-            </h1>
-            <p className="text-xl text-muted-foreground font-body leading-relaxed max-w-2xl mx-auto">
-              Comprehensive IT services designed to transform your business and accelerate success in the digital age.
-            </p>
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="services-hero">
+              <span className="inline-block px-4 py-2 rounded-full glass text-sm font-body text-primary mb-6">
+                Our Services
+              </span>
+              <h1 className="font-display text-5xl md:text-6xl lg:text-7xl font-bold mb-8 leading-tight">
+                Solutions That Power{' '}
+                <span className="text-gradient">Your Growth</span>
+              </h1>
+              <p className="text-xl text-muted-foreground font-body leading-relaxed">
+                Comprehensive IT services designed to transform your business and accelerate success in the digital age.
+              </p>
+            </div>
+            <div className="hidden lg:block">
+              <ServicesScene />
+            </div>
           </div>
         </div>
       </section>
