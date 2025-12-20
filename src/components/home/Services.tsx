@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
-import { Code, Smartphone, Cloud, Brain, ArrowRight, Palette, Shield } from 'lucide-react';
+import { Code, Smartphone, Cloud, Brain, ArrowRight, Palette, Shield, Megaphone, TrendingUp, Globe } from 'lucide-react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
@@ -15,32 +15,32 @@ const services = [
   },
   {
     icon: Smartphone,
-    title: 'Mobile Apps',
+    title: 'Mobile Application',
     description: 'Native and cross-platform mobile applications that deliver exceptional user experiences.',
     color: 'from-purple-500 to-pink-400',
   },
   {
-    icon: Cloud,
-    title: 'Cloud Solutions',
-    description: 'Scalable cloud infrastructure and DevOps solutions for modern businesses.',
+    icon: TrendingUp,
+    title: 'Digital Marketing',
+    description: 'Data-driven digital marketing solutions designed to scale brands and accelerate business growth.',
     color: 'from-emerald-500 to-teal-400',
   },
   {
     icon: Brain,
-    title: 'AI & Machine Learning',
+    title: 'AI & Tools',
     description: 'Intelligent systems and automation powered by advanced AI algorithms.',
     color: 'from-orange-500 to-amber-400',
   },
   {
     icon: Palette,
-    title: 'UI/UX Design',
+    title: 'Graphic Designing',
     description: 'Beautiful, intuitive interfaces designed to engage and convert users.',
     color: 'from-pink-500 to-rose-400',
   },
   {
-    icon: Shield,
-    title: 'Cybersecurity',
-    description: 'Comprehensive security solutions to protect your digital assets.',
+    icon: Globe,
+    title: 'WordPress Development',
+    description: 'Custom, fast, and scalable WordPress websites tailored for modern businesses.',
     color: 'from-red-500 to-orange-400',
   },
 ];

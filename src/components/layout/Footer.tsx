@@ -30,7 +30,7 @@ const Footer = () => {
           <div>
             <h4 className="font-display text-lg font-bold mb-6">Quick Links</h4>
             <ul className="space-y-4">
-              {['About Us', 'Services', 'Portfolio', 'Contact'].map((item) => (
+              {['Home','About Us', 'Services', '', 'Contact'].map((item) => (
                 <li key={item}>
                   <Link
                     to={`/${item.toLowerCase().replace(' ', '-')}`}
@@ -47,7 +47,7 @@ const Footer = () => {
           <div>
             <h4 className="font-display text-lg font-bold mb-6">Services</h4>
             <ul className="space-y-4">
-              {['Web Development', 'Mobile Apps', 'Cloud Solutions', 'AI & ML'].map((item) => (
+              {['Web Development', 'Mobile Application', 'Digital Marketing', 'AI & Tools', 'Graphic Designing', 'WordPress Development'].map((item) => (
                 <li key={item}>
                   <Link
                     to="/services"
@@ -66,15 +66,16 @@ const Footer = () => {
             <ul className="space-y-4">
               <li className="flex items-center gap-3 text-muted-foreground">
                 <Mail size={18} className="text-primary" />
-                <span className="font-body">hello@arkhive.io</span>
+                <span className="font-body">arkhiveinnovations@gmail.com</span>
               </li>
               <li className="flex items-center gap-3 text-muted-foreground">
                 <Phone size={18} className="text-primary" />
-                <span className="font-body">+1 (555) 123-4567</span>
+                <span className="font-body">+91 7204996364</span>
+                <span className="font-body">+91 8088522218</span>
               </li>
               <li className="flex items-start gap-3 text-muted-foreground">
                 <MapPin size={18} className="text-primary mt-1" />
-                <span className="font-body">123 Innovation Drive<br />Tech City, TC 12345</span>
+                <span className="font-body">Bengaluru<br />BTM Layout Stage 1</span>
               </li>
             </ul>
           </div>

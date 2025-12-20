@@ -97,11 +97,11 @@ const CTA = () => {
               <span className="font-body text-sm">Available for Projects</span>
             </div>
             <div className="flex items-center gap-2">
-              <span className="font-display text-2xl font-bold text-foreground">100+</span>
+              <span className="font-display text-2xl font-bold text-foreground">2+</span>
               <span className="font-body text-sm">Projects Delivered</span>
             </div>
             <div className="flex items-center gap-2">
-              <span className="font-display text-2xl font-bold text-foreground">50+</span>
+              <span className="font-display text-2xl font-bold text-foreground">2+</span>
               <span className="font-body text-sm">Happy Clients</span>
             </div>
           </div>

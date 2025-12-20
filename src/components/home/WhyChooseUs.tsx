@@ -1,5 +1,5 @@
 import { useEffect, useRef } from 'react';
-import { Zap, Users, Trophy, Headphones } from 'lucide-react';
+import { Zap, Users, Trophy, Headphones, CheckCircle } from 'lucide-react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
@@ -15,17 +15,17 @@ const features = [
   },
   {
     icon: Users,
-    title: 'Expert Team',
-    description: 'Our seasoned professionals bring decades of combined experience.',
-    stat: '50+',
+    title: 'Built on Process, Not Headcount',
+    description: 'We work closely with every client, understanding their goals and building solutions that matter.',
+    stat: '2',
     statLabel: 'IT Experts',
   },
   {
-    icon: Trophy,
-    title: 'Award Winning',
-    description: 'Recognized for excellence in digital innovation and design.',
-    stat: '25+',
-    statLabel: 'Industry Awards',
+    icon: CheckCircle,
+    title: 'Projects Delivered',
+    description: 'Every project is handled with full attention, accountability, and care.',
+    stat: '2',
+    statLabel: 'Projects Completed',
   },
   {
     icon: Headphones,

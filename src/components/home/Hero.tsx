@@ -75,7 +75,7 @@ const Hero = () => {
           {/* Badge */}
           <div className="hero-badge inline-flex items-center gap-2 px-4 py-2 rounded-full glass mb-8">
             <span className="w-2 h-2 rounded-full bg-primary animate-pulse-glow" />
-            <span className="text-sm font-body text-muted-foreground">IT Services & Innovation</span>
+            {/* <span className="text-sm font-body text-muted-foreground">IT Services & Innovation</span> */}
           </div>
 
           {/* Headline */}
@@ -99,24 +99,24 @@ const Hero = () => {
               Start Your Project
               <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
             </Link>
-            <button
+            {/* <button
               className="group flex items-center gap-3 px-8 py-4 rounded-full glass text-foreground font-medium text-lg transition-all duration-300 hover:bg-primary/10"
             >
               <span className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center">
                 <Play className="w-4 h-4 text-primary fill-primary" />
               </span>
               Watch Showreel
-            </button>
+            </button> */}
           </div>
         </div>
 
         {/* Scroll Indicator */}
-        <div className="scroll-indicator absolute bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2">
+        {/* <div className="scroll-indicator absolute bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2">
           <span className="text-xs font-body text-muted-foreground uppercase tracking-wider">Scroll to explore</span>
           <div className="w-6 h-10 rounded-full border-2 border-primary/30 flex items-start justify-center p-1">
             <div className="w-1.5 h-3 rounded-full bg-primary animate-bounce" />
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );

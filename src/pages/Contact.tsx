@@ -105,20 +105,20 @@ const Contact = () => {
     {
       icon: Mail,
       title: 'Email Us',
-      content: 'hello@arkhive.io',
-      description: 'We respond within 24 hours',
+      content: 'arkhiveinnovations@gmail.com',
+      description: 'We respond as soon as possible',
     },
     {
       icon: Phone,
       title: 'Call Us',
-      content: '+1 (555) 123-4567',
-      description: 'Mon-Fri 9am-6pm EST',
+      content: '+91 72049 96364 | +91 80885 22218',
+      description: 'Mon-Sat 9am-6pm IST',
     },
     {
       icon: MapPin,
       title: 'Visit Us',
-      content: '123 Innovation Drive',
-      description: 'Tech City, TC 12345',
+      content: 'Bengaluru',
+      description: 'BTM Layout Stage 1',
     },
     {
       icon: Clock,
@@ -249,11 +249,11 @@ const Contact = () => {
                     >
                       <option value="">Select a service</option>
                       <option value="web">Web Development</option>
-                      <option value="mobile">Mobile Apps</option>
-                      <option value="cloud">Cloud Solutions</option>
-                      <option value="ai">AI & Machine Learning</option>
-                      <option value="design">UI/UX Design</option>
-                      <option value="security">Cybersecurity</option>
+                      <option value="mobile">Mobile Application</option>
+                      <option value="cloud">Digital Marketing</option>
+                      <option value="ai">AI & Tools</option>
+                      <option value="design">Graphic Designing</option>
+                      <option value="security">WordPress Development</option>
                       <option value="other">Other</option>
                     </select>
                   </div>

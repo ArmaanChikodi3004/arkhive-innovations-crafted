@@ -7,26 +7,25 @@ import useLenis from '@/hooks/useLenis';
 import AboutScene from '@/components/three/AboutScene';
 import Floating3DLogo from '@/components/three/Floating3DLogo';
 import gsap from 'gsap';
+
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 gsap.registerPlugin(ScrollTrigger);
 
 const founders = [
-  {
-    name: 'Alex Chen',
-    role: 'CEO & Founder',
-    bio: 'Visionary leader with 15+ years in tech innovation.',
-  },
-  {
-    name: 'Sarah Williams',
-    role: 'CTO',
-    bio: 'Expert in cloud architecture and AI systems.',
-  },
-  {
-    name: 'Michael Park',
-    role: 'COO',
-    bio: 'Operations specialist driving efficiency and growth.',
-  },
+ {
+  name: 'Khwaja Waize',
+  role: 'Co-Founder',
+  bio: 'Backend-focused full stack developer specializing in scalable architectures, AI systems, and server-side technologies.',
+  image: '/src/assets/CoFounder1.jpeg',
+},
+{
+  name: 'Armaan S Chikodi',
+  role: 'Co-Founder',
+  bio: 'Frontend-focused full stack developer specializing in modern UI, user experience, and AI-powered interfaces.',
+  image: '/src/assets/CoFounder2.png',
+},
+
 ];
 
 const values = [
@@ -177,13 +176,15 @@ const About = () => {
               </h2>
               <div className="space-y-6 text-muted-foreground font-body text-lg leading-relaxed">
                 <p>
-                  Founded in 2020, Arkhive Innovations emerged from a simple belief: technology should empower, not complicate. What started as a small team of three has grown into a powerhouse of over 50 IT experts.
+                 Founded in 2025, Arkhive Innovations was built on a simple belief: technology should empower, not complicate. What began as a focused team of two passionate IT professionals has grown into a trusted digital partner delivering impactful solutions for modern businesses.
                 </p>
                 <p>
-                  Our journey has been defined by relentless innovation and an unwavering commitment to our clients' success. Today, we serve businesses across the globe, helping them navigate the digital landscape with confidence.
+                  With 1+ years of hands-on experience, our journey has been driven by innovation, precision, and a deep commitment to client success. We work closely with businesses to help them navigate the digital landscape with clarity, confidence, and measurable results.
                 </p>
                 <p>
-                  We Create. You Grow. This isn't just our tagline—it's our promise.
+                   <b>We Create. You Grow.</b>
+                <br />
+                  This isn't just our tagline—it's our promise.
                 </p>
               </div>
             </div>
@@ -193,15 +194,15 @@ const About = () => {
               <div className="absolute bottom-0 left-0 right-0 p-8">
                 <div className="grid grid-cols-3 gap-4 text-center glass rounded-2xl p-6">
                   <div>
-                    <span className="block font-display text-3xl font-bold text-gradient">5+</span>
+                    <span className="block font-display text-3xl font-bold text-gradient">1+</span>
                     <span className="text-sm text-muted-foreground">Years</span>
                   </div>
                   <div>
-                    <span className="block font-display text-3xl font-bold text-gradient">100+</span>
+                    <span className="block font-display text-3xl font-bold text-gradient">2</span>
                     <span className="text-sm text-muted-foreground">Projects</span>
                   </div>
                   <div>
-                    <span className="block font-display text-3xl font-bold text-gradient">50+</span>
+                    <span className="block font-display text-3xl font-bold text-gradient">2+</span>
                     <span className="text-sm text-muted-foreground">Experts</span>
                   </div>
                 </div>
@@ -244,39 +245,55 @@ const About = () => {
       </section>
 
       {/* Founders */}
-      <section className="py-32 relative">
-        <div className="container mx-auto px-6">
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <span className="inline-block px-4 py-2 rounded-full glass text-sm font-body text-primary mb-6">
-              Leadership
-            </span>
-            <h2 className="font-display text-4xl md:text-5xl font-bold mb-6">
-              Meet Our <span className="text-gradient">Founders</span>
-            </h2>
-            <p className="text-muted-foreground text-lg font-body">
-              The visionary minds driving innovation at Arkhive.
-            </p>
-          </div>
+<section className="py-32 relative">
+  <div className="container mx-auto px-6">
+    <div className="text-center max-w-3xl mx-auto mb-16">
+      <span className="inline-block px-4 py-2 rounded-full glass text-sm font-body text-primary mb-6">
+        Leadership
+      </span>
+      <h2 className="font-display text-4xl md:text-5xl font-bold mb-6">
+        Meet Our <span className="text-gradient">Founders</span>
+      </h2>
+      <p className="text-muted-foreground text-lg font-body">
+        The visionary minds driving innovation at Arkhive.
+      </p>
+    </div>
 
-          <div className="founders-grid grid md:grid-cols-3 gap-8">
-            {founders.map((founder, index) => (
-              <div
-                key={index}
-                className="founder-card group p-8 rounded-3xl bg-gradient-card border border-border/50 text-center hover:border-primary/30 transition-all duration-500"
-              >
-                <div className="w-32 h-32 mx-auto rounded-full bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center mb-6 group-hover:scale-105 transition-transform duration-500">
-                  <span className="font-display text-4xl font-bold text-gradient">
-                    {founder.name.split(' ').map(n => n[0]).join('')}
-                  </span>
-                </div>
-                <h3 className="font-display text-2xl font-bold mb-2">{founder.name}</h3>
-                <p className="text-primary font-body text-sm uppercase tracking-wider mb-4">{founder.role}</p>
-                <p className="text-muted-foreground font-body">{founder.bio}</p>
-              </div>
-            ))}
-          </div>
+    <div className="founders-grid grid md:grid-cols-2 gap-8 justify-center place-items-center">
+      {founders.map((founder, index) => (
+        <div
+          key={index}
+          className="founder-card group p-8 rounded-3xl bg-gradient-card border border-border/50 text-center hover:border-primary/30 transition-all duration-500 max-w-sm w-full"
+        >
+          {/* <div className="w-32 h-32 mx-auto rounded-full bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center mb-6 group-hover:scale-105 transition-transform duration-500">
+            <span className="font-display text-4xl font-bold text-gradient">
+              {founder.name.split(' ').map(n => n[0]).join('')}
+            </span>
+          </div> */}
+          <div className="w-32 h-32 mx-auto rounded-full overflow-hidden mb-6 border border-border/40 group-hover:scale-105 transition-transform duration-500">
+  <img
+    src={founder.image}
+    alt={founder.name}
+    className="w-full h-full object-cover"
+    loading="lazy"
+  />
+</div>
+
+          <h3 className="font-display text-2xl font-bold mb-2">
+            {founder.name}
+          </h3>
+          <p className="text-primary font-body text-sm uppercase tracking-wider mb-4">
+            {founder.role}
+          </p>
+          <p className="text-muted-foreground font-body">
+            {founder.bio}
+          </p>
         </div>
-      </section>
+      ))}
+    </div>
+  </div>
+</section>
+
 
       {/* Values */}
       <section className="py-32 bg-card/30 relative">

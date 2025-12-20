@@ -10,7 +10,9 @@ import {
   Shield, 
   Database,
   Workflow,
-  Check
+  Check,
+  TrendingUp,
+  Globe
 } from 'lucide-react';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
@@ -28,6 +30,7 @@ const services = [
     description: 'Custom websites and web applications built with cutting-edge technologies for optimal performance and user experience.',
     features: ['React & Next.js', 'Progressive Web Apps', 'E-commerce Solutions', 'CMS Development'],
     color: 'from-blue-500 to-cyan-400',
+    image: '/src/assets/website.png',
   },
   {
     icon: Smartphone,
@@ -35,49 +38,41 @@ const services = [
     description: 'Native and cross-platform mobile applications that deliver exceptional user experiences across all devices.',
     features: ['iOS & Android', 'React Native', 'Flutter', 'App Store Optimization'],
     color: 'from-purple-500 to-pink-400',
+    image: '/src/assets/mobile.png',
   },
   {
-    icon: Cloud,
-    title: 'Cloud Solutions',
-    description: 'Scalable cloud infrastructure and DevOps solutions that grow with your business needs.',
-    features: ['AWS & Azure', 'Cloud Migration', 'Serverless Architecture', 'Auto-scaling'],
+    icon: TrendingUp,
+    title: 'Digital Marketing',
+    description: 'Powerful digital marketing solutions designed to increase visibility, engagement, and conversions for your business.',
+    features: ['Search Engine Optimization (SEO)', 'Social Media Growth & Ads', 'Paid Campaigns & Lead Generation', 'Branding & Content Marketing'],
     color: 'from-emerald-500 to-teal-400',
+    image: '/src/assets/digitalmarketing.png',
   },
   {
     icon: Brain,
-    title: 'AI & Machine Learning',
+    title: 'AI & Tools',
     description: 'Intelligent systems and automation powered by advanced AI algorithms to transform your operations.',
     features: ['Predictive Analytics', 'Natural Language Processing', 'Computer Vision', 'Chatbots'],
     color: 'from-orange-500 to-amber-400',
+    image: '/src/assets/ai.png',
   },
   {
     icon: Palette,
-    title: 'UI/UX Design',
+    title: 'Graphic Designing',
     description: 'Beautiful, intuitive interfaces designed to engage users and drive conversions.',
     features: ['User Research', 'Wireframing', 'Prototyping', 'Design Systems'],
     color: 'from-pink-500 to-rose-400',
+    image: '/src/assets/graphic.png',
   },
   {
-    icon: Shield,
-    title: 'Cybersecurity',
-    description: 'Comprehensive security solutions to protect your digital assets and customer data.',
-    features: ['Security Audits', 'Penetration Testing', 'Compliance', 'Incident Response'],
+    icon: Globe,
+    title: 'WordPress Development',
+    description: 'Custom WordPress solutions designed to build fast, secure, and scalable websites tailored to your business goals.',
+    features: ['Custom Theme Development', 'Plugin Development & Integration', 'Performance Optimization', 'Maintenance & Security'],
     color: 'from-red-500 to-orange-400',
+    image: '/src/assets/wordpress.png',
   },
-  {
-    icon: Database,
-    title: 'Data Engineering',
-    description: 'Build robust data pipelines and analytics infrastructure for informed decision-making.',
-    features: ['Data Warehousing', 'ETL Pipelines', 'Real-time Analytics', 'Data Visualization'],
-    color: 'from-indigo-500 to-blue-400',
-  },
-  {
-    icon: Workflow,
-    title: 'Digital Transformation',
-    description: 'End-to-end digital transformation consulting to modernize your business processes.',
-    features: ['Process Automation', 'Legacy Modernization', 'Change Management', 'Strategy'],
-    color: 'from-cyan-500 to-emerald-400',
-  },
+ 
 ];
 
 const Services = () => {
@@ -198,9 +193,38 @@ const Services = () => {
                 <div className={`${index % 2 === 1 ? 'lg:order-1' : ''}`}>
                   <div className="relative aspect-square max-w-md mx-auto">
                     <div className={`absolute inset-0 rounded-3xl bg-gradient-to-br ${service.color} opacity-10`} />
-                    <div className="absolute inset-4 rounded-2xl bg-gradient-card border border-border/50 flex items-center justify-center">
+                    {/* <div className="absolute inset-4 rounded-2xl bg-gradient-card border border-border/50 flex items-center justify-center">
                       <service.icon className="w-32 h-32 text-primary/20" />
-                    </div>
+                    </div> */}
+                    <div className={`${index % 2 === 1 ? 'lg:order-1' : ''}`}>
+  <div className="relative aspect-square max-w-md mx-auto">
+    {/* Glow background */}
+    <div className={`absolute inset-0 rounded-3xl bg-gradient-to-br ${service.color} opacity-10`} />
+
+    {/* Image frame (matches provided image style) */}
+    <div className="absolute inset-4 rounded-2xl bg-gradient-card border border-border/50 overflow-hidden flex items-center justify-center">
+      <img
+        src={service.image}
+        alt={service.title}
+        className="w-full h-full object-cover opacity-90"
+        loading="lazy"
+      />
+    </div>
+
+    {/* Floating accent elements (keeps premium feel) */}
+    <div className="absolute -top-4 -right-4 w-20 h-20 rounded-xl bg-gradient-card border border-border/50 flex items-center justify-center animate-float">
+      <service.icon className="w-8 h-8 text-primary" />
+    </div>
+
+    <div
+      className="absolute -bottom-4 -left-4 w-16 h-16 rounded-xl bg-gradient-card border border-border/50 flex items-center justify-center animate-float"
+      style={{ animationDelay: '1s' }}
+    >
+      <Shield className="w-6 h-6 text-accent" />
+    </div>
+  </div>
+</div>
+
                     {/* Floating elements */}
                     <div className="absolute -top-4 -right-4 w-20 h-20 rounded-xl bg-gradient-card border border-border/50 flex items-center justify-center animate-float">
                       <Code className="w-8 h-8 text-primary" />
