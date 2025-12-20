@@ -1,12 +1,40 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { useEffect } from 'react';
+import Navbar from '@/components/layout/Navbar';
+import Footer from '@/components/layout/Footer';
+import Hero from '@/components/home/Hero';
+import Services from '@/components/home/Services';
+import WhyChooseUs from '@/components/home/WhyChooseUs';
+import TechStack from '@/components/home/TechStack';
+import CTA from '@/components/home/CTA';
+import useLenis from '@/hooks/useLenis';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import gsap from 'gsap';
+
+gsap.registerPlugin(ScrollTrigger);
 
 const Index = () => {
+  useLenis();
+
+  useEffect(() => {
+    // Refresh ScrollTrigger after page load
+    ScrollTrigger.refresh();
+    
+    return () => {
+      ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+    };
+  }, []);
+
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
+    <div className="min-h-screen bg-background noise-overlay">
+      <Navbar />
+      <main>
+        <Hero />
+        <Services />
+        <WhyChooseUs />
+        <TechStack />
+        <CTA />
+      </main>
+      <Footer />
     </div>
   );
 };
