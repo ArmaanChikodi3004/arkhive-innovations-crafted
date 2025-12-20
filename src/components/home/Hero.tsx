@@ -2,7 +2,7 @@ import { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Play } from 'lucide-react';
 import gsap from 'gsap';
-import HeroScene from '../three/HeroScene';
+import Hero3DScene from '../three/Hero3DScene';
 
 const Hero = () => {
   const heroRef = useRef<HTMLDivElement>(null);
@@ -62,11 +62,11 @@ const Hero = () => {
 
   return (
     <section ref={heroRef} className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-hero">
-      {/* 3D Background */}
-      <HeroScene />
+      {/* 3D Background - React Three Fiber */}
+      <Hero3DScene />
       
       {/* Gradient Overlays */}
-      <div className="absolute inset-0 bg-gradient-to-b from-background/0 via-background/50 to-background pointer-events-none" />
+      <div className="absolute inset-0 bg-gradient-to-b from-background/0 via-background/30 to-background pointer-events-none z-[1]" />
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full bg-primary/5 blur-[150px] pointer-events-none" />
       
       {/* Content */}

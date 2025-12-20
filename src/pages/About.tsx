@@ -4,6 +4,8 @@ import { ArrowRight, Target, Eye, Heart, Lightbulb, Users, Globe } from 'lucide-
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 import useLenis from '@/hooks/useLenis';
+import AboutScene from '@/components/three/AboutScene';
+import Floating3DLogo from '@/components/three/Floating3DLogo';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
@@ -186,25 +188,21 @@ const About = () => {
               </div>
             </div>
             <div className="relative">
-              <div className="aspect-square rounded-3xl bg-gradient-card border border-border/50 overflow-hidden relative">
-                <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-transparent" />
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <span className="font-display text-9xl font-bold text-gradient opacity-30">A</span>
-                </div>
-                <div className="absolute bottom-0 left-0 right-0 p-8 bg-gradient-to-t from-background/80 to-transparent">
-                  <div className="grid grid-cols-3 gap-4 text-center">
-                    <div>
-                      <span className="block font-display text-3xl font-bold text-gradient">5+</span>
-                      <span className="text-sm text-muted-foreground">Years</span>
-                    </div>
-                    <div>
-                      <span className="block font-display text-3xl font-bold text-gradient">100+</span>
-                      <span className="text-sm text-muted-foreground">Projects</span>
-                    </div>
-                    <div>
-                      <span className="block font-display text-3xl font-bold text-gradient">50+</span>
-                      <span className="text-sm text-muted-foreground">Experts</span>
-                    </div>
+              {/* 3D Floating Logo */}
+              <Floating3DLogo />
+              <div className="absolute bottom-0 left-0 right-0 p-8">
+                <div className="grid grid-cols-3 gap-4 text-center glass rounded-2xl p-6">
+                  <div>
+                    <span className="block font-display text-3xl font-bold text-gradient">5+</span>
+                    <span className="text-sm text-muted-foreground">Years</span>
+                  </div>
+                  <div>
+                    <span className="block font-display text-3xl font-bold text-gradient">100+</span>
+                    <span className="text-sm text-muted-foreground">Projects</span>
+                  </div>
+                  <div>
+                    <span className="block font-display text-3xl font-bold text-gradient">50+</span>
+                    <span className="text-sm text-muted-foreground">Experts</span>
                   </div>
                 </div>
               </div>

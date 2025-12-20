@@ -1,6 +1,7 @@
 import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import TechStackScene from '../three/TechStackScene';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -78,7 +79,7 @@ const TechStack = () => {
       
       <div className="container mx-auto px-6 relative z-10">
         {/* Header */}
-        <div className="tech-header text-center max-w-3xl mx-auto mb-16">
+        <div className="tech-header text-center max-w-3xl mx-auto mb-8">
           <span className="inline-block px-4 py-2 rounded-full glass text-sm font-body text-primary mb-6">
             Tech Stack
           </span>
@@ -89,6 +90,11 @@ const TechStack = () => {
           <p className="text-muted-foreground text-lg font-body">
             We leverage the latest technologies to build robust, scalable, and future-proof solutions.
           </p>
+        </div>
+
+        {/* 3D Tech Stack Scene */}
+        <div className="mb-8">
+          <TechStackScene />
         </div>
 
         {/* Infinite Marquee */}
