@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { Mail, Phone, MapPin, Linkedin, Twitter, Instagram } from 'lucide-react';
-import logo from '@/assets/logo.png';
+import logo from '@/assets/AKLOGO.png';
 
 const Footer = () => {
   return (
@@ -27,7 +27,7 @@ const Footer = () => {
           </div>
 
           {/* Quick Links */}
-          <div>
+          {/* <div>
             <h4 className="font-display text-lg font-bold mb-6">Quick Links</h4>
             <ul className="space-y-4">
               {['Home','About Us', 'Services', '', 'Contact'].map((item) => (
@@ -41,7 +41,30 @@ const Footer = () => {
                 </li>
               ))}
             </ul>
-          </div>
+          </div> */}
+
+          {/* Quick Links */}
+<div>
+  <h4 className="font-display text-lg font-bold mb-6">Quick Links</h4>
+  <ul className="space-y-4">
+    {[
+      { label: 'Home', path: '/' },
+      { label: 'About Us', path: '/about' },
+      { label: 'Services', path: '/services' },
+      { label: 'Contact', path: '/contact' },
+    ].map((item) => (
+      <li key={item.label}>
+        <Link
+          to={item.path}
+          className="text-muted-foreground hover:text-primary transition-colors duration-300 font-body line-animate pb-1"
+        >
+          {item.label}
+        </Link>
+      </li>
+    ))}
+  </ul>
+</div>
+
 
           {/* Services */}
           <div>

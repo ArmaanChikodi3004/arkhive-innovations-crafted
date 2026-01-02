@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
-import logo from '@/assets/logo.png';
+import logo from '@/assets/AKLOGO.png';
 import gsap from 'gsap';
 
 const navLinks = [
@@ -45,13 +45,22 @@ const Navbar = () => {
     >
       <div className="container mx-auto px-6 flex items-center justify-between">
         {/* Logo */}
-        <Link to="/" className="nav-item relative z-10">
-          <img 
-            src={logo} 
-            alt="Arkhive Innovations" 
-            className="h-12 w-auto transition-transform duration-300 hover:scale-105"
-          />
+        
+        <Link
+        to="/"
+        className="nav-item relative z-10 flex items-center gap-3 leading-none"
+        >
+        <img
+         src={logo}
+          alt="Arkhive Innovations"
+          className="h-12 w-auto block"
+         />
+
+        <span className="block font-display text-lg font-semibold tracking-wide text-foreground leading-none">
+        Arkhive Innovations
+         </span>
         </Link>
+
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center gap-8">
