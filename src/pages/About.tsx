@@ -17,13 +17,13 @@ const founders = [
   name: 'Khwaja Waize',
   role: 'Co-Founder',
   bio: 'Backend-focused full stack developer specializing in scalable architectures, AI systems, and server-side technologies.',
-  image: '/src/assets/CoFounder1.jpeg',
+  image: '/images/CoFounder1.jpeg',
 },
 {
   name: 'Armaan S Chikodi',
   role: 'Co-Founder',
   bio: 'Frontend-focused full stack developer specializing in modern UI, user experience, and AI-powered interfaces.',
-  image: '/src/assets/CoFounder2.png',
+  image: '/images/CoFounder2.png',
 },
 
 ];

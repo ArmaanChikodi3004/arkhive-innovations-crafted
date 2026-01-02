@@ -30,7 +30,7 @@ const services = [
     description: 'Custom websites and web applications built with cutting-edge technologies for optimal performance and user experience.',
     features: ['React & Next.js', 'Progressive Web Apps', 'E-commerce Solutions', 'CMS Development'],
     color: 'from-blue-500 to-cyan-400',
-    image: '/src/assets/website.png',
+    image: '/images/website.png',
   },
   {
     icon: Smartphone,
@@ -38,7 +38,7 @@ const services = [
     description: 'Native and cross-platform mobile applications that deliver exceptional user experiences across all devices.',
     features: ['iOS & Android', 'React Native', 'Flutter', 'App Store Optimization'],
     color: 'from-purple-500 to-pink-400',
-    image: '/src/assets/mobile.png',
+    image: '/images/mobile.png',
   },
   {
     icon: TrendingUp,
@@ -46,7 +46,7 @@ const services = [
     description: 'Powerful digital marketing solutions designed to increase visibility, engagement, and conversions for your business.',
     features: ['Search Engine Optimization (SEO)', 'Social Media Growth & Ads', 'Paid Campaigns & Lead Generation', 'Branding & Content Marketing'],
     color: 'from-emerald-500 to-teal-400',
-    image: '/src/assets/digitalmarketing.png',
+    image: '/images/digitalmarketing.png',
   },
   {
     icon: Brain,
@@ -54,7 +54,7 @@ const services = [
     description: 'Intelligent systems and automation powered by advanced AI algorithms to transform your operations.',
     features: ['Predictive Analytics', 'Natural Language Processing', 'Computer Vision', 'Chatbots'],
     color: 'from-orange-500 to-amber-400',
-    image: '/src/assets/ai.png',
+    image: '/images/ai.png',
   },
   {
     icon: Palette,
@@ -62,7 +62,7 @@ const services = [
     description: 'Beautiful, intuitive interfaces designed to engage users and drive conversions.',
     features: ['User Research', 'Wireframing', 'Prototyping', 'Design Systems'],
     color: 'from-pink-500 to-rose-400',
-    image: '/src/assets/graphic.png',
+    image: '/images/graphic.png',
   },
   {
     icon: Globe,
@@ -70,7 +70,7 @@ const services = [
     description: 'Custom WordPress solutions designed to build fast, secure, and scalable websites tailored to your business goals.',
     features: ['Custom Theme Development', 'Plugin Development & Integration', 'Performance Optimization', 'Maintenance & Security'],
     color: 'from-red-500 to-orange-400',
-    image: '/src/assets/wordpress.png',
+    image: '/images/wordpress.png',
   },
  
 ];
